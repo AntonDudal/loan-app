@@ -25,7 +25,7 @@ test('Apply for loan E2E', async ({ page }) => {
     await page.goto('https://loan-app.tallinn-learning.ee/small-loan');
     await page.getByTestId('id-small-loan-calculator-field-apply').click();
     await expect (page.getByTestId('login-popup-continue-button')).toBeDisabled();
-    await page.getByTestId('login-popup-username-input').fill('test');
+    await page.getByTestId('login-popup-username-input').fill(faker.internet.email());
     await page.getByTestId('login-popup-password-input').fill('test123');
     await page.getByTestId('login-popup-continue-button').click();
     await expect (page.getByTestId('final-page-full-name')).toBeVisible();
