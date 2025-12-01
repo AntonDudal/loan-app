@@ -34,7 +34,6 @@ test('Apply for loan E2E', async ({ page }) => {
     await page.getByTestId('final-page-continue-button').click();
     await page.getByTestId('final-page-success-ok-button').click();
     await expect (page.getByTestId('id-small-loan-calculator-field-amount')).toBeInViewport();
-
 });
 
 test('verify validation error for amount field', async ({ page }) => {
@@ -43,5 +42,5 @@ test('verify validation error for amount field', async ({ page }) => {
     await expect (page.getByTestId('id-small-loan-calculator-field-error')).toBeVisible();
     await (page.getByTestId('id-small-loan-calculator-field-amount')).fill('500');
     await expect (page.getByTestId('id-small-loan-calculator-field-error')).toBeHidden();
-    //asfdsdafa
+    //asfdsdafasadfsafs
 });
