@@ -1,4 +1,5 @@
 import {test, expect, selectors} from '@playwright/test';
+import {faker} from "@faker-js/faker/locale/en";
 
 test('Verify app fields in place', async ({ page }) => {
   await page.goto('https://loan-app.tallinn-learning.ee/small-loan');
