@@ -1,4 +1,4 @@
-import {test, expect, selectors} from '@playwright/test';
+import {test, expect} from '@playwright/test';
 import {faker} from "@faker-js/faker/locale/en";
 
 test('Verify app fields in place', async ({ page }) => {
@@ -43,4 +43,5 @@ test('verify validation error for amount field', async ({ page }) => {
     await expect (page.getByTestId('id-small-loan-calculator-field-error')).toBeVisible();
     await (page.getByTestId('id-small-loan-calculator-field-amount')).fill('500');
     await expect (page.getByTestId('id-small-loan-calculator-field-error')).toBeHidden();
+    //asfdsdafa
 });
